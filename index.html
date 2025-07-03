@@ -1,21 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shivam Sharma | Portfolio</title>
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
       font-family: 'Segoe UI', sans-serif;
       background: #0a0f1c;
       color: #d0f0ff;
       overflow-x: hidden;
     }
+    body {
+      display: flex;
+      flex-direction: column;
+    }
     header {
       background: #0f1624;
       padding: 2rem;
       text-align: center;
+      animation: fadeIn 2s ease-in;
     }
     header h1 {
       margin: 0;
@@ -28,8 +35,11 @@
     }
     .section {
       padding: 2rem;
-      max-width: 1000px;
+      flex: 1;
+      max-width: 1400px;
+      width: 100%;
       margin: auto;
+      box-sizing: border-box;
     }
     .section h2 {
       color: #00eaff;
@@ -48,13 +58,14 @@
       border-radius: 8px;
       color: #00eaff;
       font-weight: bold;
+      flex: 1 1 200px;
+      text-align: center;
     }
     footer {
       text-align: center;
       padding: 1rem;
       color: #555;
       background: #0f1624;
-      margin-top: 2rem;
     }
     .contact-info {
       color: #00eaff;
@@ -68,6 +79,49 @@
     .contact-info a:hover {
       text-decoration: underline;
     }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .linkedin-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: #0077b5;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .linkedin-button:hover {
+      background: #005582;
+    }
+    .floating-icons {
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transform: translateY(-50%);
+    }
+    .floating-icons a {
+      display: block;
+      animation: float 2s infinite ease-in-out;
+    }
+    .floating-icons img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.5s ease;
+    }
+    .floating-icons img:hover {
+      transform: rotate(360deg);
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
   </style>
 </head>
 <body>
@@ -75,9 +129,8 @@
     <h1>Shivam Sharma</h1>
     <p>Linux Administrator | AWS Cloud | DevOps Engineer (in progress)</p>
     <em>"Automating Everything, One Script at a Time"</em>
-  </header>
-
-  <div class="section">
+    <a href="https://www.linkedin.com/in/ShivamSharmaDevOps" target="_blank" class="linkedin-button">Connect on LinkedIn</a>
+  </header>  <div class="section">
     <h2>About Me</h2>
     <p>I am a Linux Administrator and AWS Cloud enthusiast with a passion for automation, scripting, and troubleshooting. Currently pursuing a career in DevOps engineering.</p>
     <div class="contact-info">
@@ -85,9 +138,7 @@
       🐙 GitHub: <a href="https://github.com/ShivamSharmaDevOps" target="_blank">github.com/ShivamSharmaDevOps</a><br>
       🔗 LinkedIn: <a href="https://www.linkedin.com/in/ShivamSharmaDevOps" target="_blank">linkedin.com/in/ShivamSharmaDevOps</a>
     </div>
-  </div>
-
-  <div class="section">
+  </div>  <div class="section">
     <h2>Skills</h2>
     <div class="skills-grid">
       <div class="skill">Linux</div>
@@ -98,16 +149,22 @@
       <div class="skill">Monitoring</div>
       <div class="skill">Troubleshooting</div>
     </div>
-  </div>
-
-  <div class="section">
+  </div>  <div class="section">
     <h2>Projects</h2>
     <p><strong>Project 1:</strong> Setup of EC2-based monitoring with CloudWatch alarms and shell-scripted cron cleanup tasks. (Demo coming soon)</p>
     <p><strong>Project 2:</strong> Automated LVM disk extension script with email alert. (Demo coming soon)</p>
-  </div>
-
-  <footer>
+  </div>  <footer>
     &copy; 2025 Shivam Sharma | Designed in Tech Theme
-  </footer>
+  </footer>  <div class="floating-icons">
+    <a href="https://www.linux.org/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" alt="Linux" title="Linux">
+    </a>
+    <a href="https://aws.amazon.com/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" alt="AWS" title="AWS">
+    </a>
+    <a href="https://github.com/ShivamSharmaDevOps" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png" alt="GitHub" title="GitHub">
+    </a>
+  </div>
 </body>
-</html>
+    </html>
