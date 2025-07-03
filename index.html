@@ -113,6 +113,23 @@
       font-weight: 500;
     }
 
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .skill-badge {
+      background-color: #1e293b;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      color: #38bdf8;
+      font-weight: 500;
+    }
+
     form {
       max-width: 400px;
       margin: auto;
@@ -162,6 +179,7 @@
     <div>
       <a href="#home">Home</a>
       <a href="#tech">Tech</a>
+      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
@@ -181,25 +199,37 @@
     </div>
   </section>
 
+  <section id="skills" class="section" data-aos="fade-up">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skill-badge">Linux Administration</div>
+      <div class="skill-badge">AWS EC2 & S3</div>
+      <div class="skill-badge">Shell Scripting</div>
+      <div class="skill-badge">Monitoring Tools (Nagios)</div>
+      <div class="skill-badge">Git & GitHub</div>
+      <div class="skill-badge">Networking Basics</div>
+      <div class="skill-badge">Apache/Nginx</div>
+      <div class="skill-badge">User & Permission Management</div>
+    </div>
+  </section>
+
   <section id="projects" class="section" data-aos="fade-up">
     <h2>Projects</h2>
     <div class="projects">
       <div class="project-card">
-        <img src="https://source.unsplash.com/300x200/?cloud,devops" alt="Project 1">
-        <h3>CI/CD Pipeline</h3>
-        <p>Created a full CI/CD pipeline using Jenkins, GitHub, Docker, and AWS EC2.</p>
+        <img src="https://source.unsplash.com/300x200/?linux,scripting" alt="Linux Admin Toolkit">
+        <h3>Linux Admin Toolkit</h3>
+        <p>Designed a toolkit with shell scripts for user management, backups, monitoring, and log analysis on Linux servers.</p>
         <div class="project-links">
           <a href="#">GitHub</a>
-          <a href="#">Live Demo</a>
         </div>
       </div>
       <div class="project-card">
-        <img src="https://source.unsplash.com/300x200/?linux,terminal" alt="Project 2">
-        <h3>Linux Automation</h3>
-        <p>Automated server monitoring using Bash and cron jobs for real-time alerting.</p>
+        <img src="https://source.unsplash.com/300x200/?monitoring,server" alt="Monitoring Script">
+        <h3>Server Monitoring Script</h3>
+        <p>Automated CPU, memory & disk usage alerts with cron + email notification using shell scripts.</p>
         <div class="project-links">
           <a href="#">GitHub</a>
-          <a href="#">Live Demo</a>
         </div>
       </div>
     </div>
@@ -207,7 +237,7 @@
 
   <section id="about" class="section" data-aos="fade-up">
     <h2>About Me</h2>
-    <p>I am a DevOps enthusiast who loves working with cloud infrastructure, Linux systems, and automation tools.</p>
+    <p>I am a Linux & Cloud enthusiast who loves managing systems, automating tasks, and building secure infrastructure using open-source tools.</p>
   </section>
 
   <section id="contact" class="section" data-aos="fade-up">
@@ -228,7 +258,7 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
     var typed = new Typed("#typed", {
-      strings: ["DevOps Engineer", "Linux Administrator", "AWS Enthusiast", "Cloud Learner"],
+      strings: ["Linux Administrator", "AWS Enthusiast", "Shell Scripter", "Cloud Learner"],
       typeSpeed: 50,
       backSpeed: 30,
       loop: true
