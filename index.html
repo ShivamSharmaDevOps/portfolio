@@ -1,171 +1,160 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shivam Sharma - DevOps Portfolio</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-
-  <!-- AOS CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shivam Sharma | Portfolio</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/919/919836.png">
   <style>
-    * {
+    html, body {
       margin: 0;
       padding: 0;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #0f172a;
-      color: white;
-    }
-
-    nav {
-      background: #1e293b;
-      padding: 15px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav a {
-      color: #fff;
-      margin: 0 12px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: #38bdf8;
-    }
-
-    header {
-      text-align: center;
-      padding: 80px 20px 40px;
-    }
-
-    h1 {
-      font-size: 3rem;
-    }
-
-    #typed {
-      font-size: 1.3rem;
-      color: #38bdf8;
-      margin-top: 10px;
-    }
-
-    .section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .tech-icons img {
-      width: 60px;
-      margin: 10px;
-      transition: transform 0.3s ease;
-    }
-
-    .tech-icons img:hover {
-      transform: scale(1.2);
-    }
-
-    .projects {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .project-card {
-      background: #1e293b;
-      border-radius: 12px;
-      padding: 20px;
-      width: 300px;
-      text-align: left;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
-
-    .project-card img {
       width: 100%;
-      border-radius: 8px;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0a0f1c;
+      color: #d0f0ff;
+      overflow-x: hidden;
     }
-
-    .project-card h3 {
-      margin: 15px 0 10px;
-    }
-
-    .project-card p {
-      font-size: 0.9rem;
-    }
-
-    .project-links a {
-      text-decoration: none;
-      margin-right: 10px;
-      color: #38bdf8;
-      font-weight: 500;
-    }
-
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    .skill-badge {
-      background-color: #1e293b;
-      padding: 8px 15px;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      color: #38bdf8;
-      font-weight: 500;
-    }
-
-    form {
-      max-width: 400px;
-      margin: auto;
+    body {
       display: flex;
       flex-direction: column;
     }
-
-    form input, form textarea {
-      margin: 10px 0;
-      padding: 10px;
-      border: none;
-      border-radius: 6px;
+    nav {
+      position: sticky;
+      top: 0;
+      background: #0f1624;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      z-index: 100;
     }
-
-    form button {
-      background: #38bdf8;
-      border: none;
-      padding: 10px;
+    nav a {
+      color: #00eaff;
+      text-decoration: none;
       font-weight: bold;
-      cursor: pointer;
-      border-radius: 6px;
     }
-
-    footer {
-      background-color: #1e293b;
+    nav a:hover {
+      text-decoration: underline;
+    }
+    header {
+      background: #0f1624;
+      padding: 2rem;
       text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
+      animation: fadeIn 2s ease-in;
     }
-
-    @media(max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      .projects {
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #00eaff;
+    }
+    #typewriter {
+      color: #00eaff;
+      font-weight: bold;
+      font-size: 1.1rem;
+      border-right: 2px solid #00eaff;
+      padding-right: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+    .section {
+      padding: 2rem;
+      flex: 1;
+      max-width: 1400px;
+      width: 100%;
+      margin: auto;
+      box-sizing: border-box;
+    }
+    .section h2 {
+      color: #00eaff;
+      border-bottom: 2px solid #00eaff33;
+      padding-bottom: 0.5rem;
+    }
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .skill {
+      background: #1a2236;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      color: #00eaff;
+      font-weight: bold;
+      flex: 1 1 200px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .skill:hover {
+      box-shadow: 0 0 10px #00eaff99;
+      background: rgba(26, 34, 54, 0.8);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #555;
+      background: #0f1624;
+    }
+    .contact-info {
+      color: #00eaff;
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+    .contact-info a {
+      color: #00eaff;
+      text-decoration: none;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .linkedin-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: #0077b5;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .linkedin-button:hover {
+      background: #005582;
+    }
+    .floating-icons {
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transform: translateY(-50%);
+    }
+    .floating-icons a {
+      display: block;
+      animation: float 2s infinite ease-in-out;
+    }
+    .floating-icons img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.5s ease;
+    }
+    .floating-icons img:hover {
+      transform: rotate(360deg);
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @media (max-width: 600px) {
+      .skills-grid {
         flex-direction: column;
         align-items: center;
       }
@@ -173,102 +162,99 @@
   </style>
 </head>
 <body>
-
   <nav>
-    <div><strong>Shivam Sharma</strong></div>
-    <div>
-      <a href="#home">Home</a>
-      <a href="#tech">Tech</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-
-  <header id="home">
-    <h1>Hi, I'm Shivam Sharma</h1>
-    <div id="typed"></div>
-  </header>
-
-  <section id="tech" class="section" data-aos="fade-up">
-    <h2>Tech Stack</h2>
-    <div class="tech-icons">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" title="AWS" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" title="Linux" />
-    </div>
-  </section>
-
-  <section id="skills" class="section" data-aos="fade-up">
-    <h2>Skills</h2>
-    <div class="skills-list">
-      <div class="skill-badge">Linux Administration</div>
-      <div class="skill-badge">AWS EC2 & S3</div>
-      <div class="skill-badge">Shell Scripting</div>
-      <div class="skill-badge">Monitoring Tools (Nagios)</div>
-      <div class="skill-badge">Git & GitHub</div>
-      <div class="skill-badge">Networking Basics</div>
-      <div class="skill-badge">Apache/Nginx</div>
-      <div class="skill-badge">User & Permission Management</div>
-    </div>
-  </section>
-
-  <section id="projects" class="section" data-aos="fade-up">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project-card">
-        <img src="https://source.unsplash.com/300x200/?linux,scripting" alt="Linux Admin Toolkit">
-        <h3>Linux Admin Toolkit</h3>
-        <p>Designed a toolkit with shell scripts for user management, backups, monitoring, and log analysis on Linux servers.</p>
-        <div class="project-links">
-          <a href="#">GitHub</a>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="https://source.unsplash.com/300x200/?monitoring,server" alt="Monitoring Script">
-        <h3>Server Monitoring Script</h3>
-        <p>Automated CPU, memory & disk usage alerts with cron + email notification using shell scripts.</p>
-        <div class="project-links">
-          <a href="#">GitHub</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="section" data-aos="fade-up">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>  <header>
+    <h1>Shivam Sharma</h1>
+    <div id="typewriter"></div>
+    <a href="https://www.linkedin.com/in/ShivamSharmaDevOps" target="_blank" class="linkedin-button">Connect on LinkedIn</a>
+  </header>  <div class="section" id="about">
     <h2>About Me</h2>
-    <p>I am a Linux & Cloud enthusiast who loves managing systems, automating tasks, and building secure infrastructure using open-source tools.</p>
-  </section>
+    <p>I am a Linux Administrator and AWS Cloud enthusiast with a passion for automation, scripting, and troubleshooting. Currently pursuing a career in DevOps engineering.</p>
+    <div class="contact-info" id="contact">
+      📧 Email: <a href="mailto:Ss731782@gmail.com">Ss731782@gmail.com</a><br>
+      🐙 GitHub: <a href="https://github.com/ShivamSharmaDevOps" target="_blank">github.com/ShivamSharmaDevOps</a><br>
+      🔗 LinkedIn: <a href="https://www.linkedin.com/in/ShivamSharmaDevOps" target="_blank">linkedin.com/in/ShivamSharmaDevOps</a>
+    </div>
+  </div>  <div class="section" id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">Linux</div>
+      <div class="skill">AWS (EC2, S3, CloudWatch)</div>
+      <div class="skill">Shell Scripting</div>
+      <div class="skill">Cron Jobs</div>
+      <div class="skill">LVM</div>
+      <div class="skill">Monitoring</div>
+      <div class="skill">Troubleshooting</div>
+      <div class="skill">CI/CD (Basics)</div>
+      <div class="skill">Git</div>
+    </div>
+  </div>  <div class="section" id="projects">
+    <h2>Projects</h2>
+    <p><strong>Project 1:</strong> Setup of EC2-based monitoring with CloudWatch alarms and shell-scripted cron cleanup tasks.</p>
+    <p><strong>Project 2:</strong> Automated LVM disk extension script with email alert.</p>
+    <p><strong>Project 3:</strong> Created Git-based deployment with basic CI/CD shell scripting.</p>
+  </div>  <div class="section">
+    <h2>Certifications</h2>
+    <ul>
+      <li>✅ AWS Cloud Practitioner (In Progress)</li>
+      <li>✅ RHCSA (Learning Stage)</li>
+    </ul>
+  </div>  <div class="section">
+    <h2>Testimonials</h2>
+    <blockquote>
+      "Shivam is a fast learner and automates like a pro!" – Former Manager
+    </blockquote>
+  </div>  <footer>
+    &copy; 2025 Shivam Sharma | Designed in Tech Theme
+  </footer>  <div class="floating-icons">
+    <a href="https://www.linux.org/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" alt="Linux logo" title="Linux">
+    </a>
+    <a href="https://aws.amazon.com/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" alt="AWS logo" title="AWS">
+    </a>
+    <a href="https://github.com/ShivamSharmaDevOps" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png" alt="GitHub logo" title="GitHub">
+    </a>
+  </div>  <script>
+    const texts = [
+      "Automating Everything, One Script at a Time",
+      "Linux Administrator | AWS Cloud | DevOps Enthusiast",
+      "Scripting to Solve Real Problems"
+    ];
+    let index = 0;
+    let charIndex = 0;
+    let currentText = "";
+    let isDeleting = false;
+    const typewriterElement = document.getElementById("typewriter");
 
-  <section id="contact" class="section" data-aos="fade-up">
-    <h2>Contact Me</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+    function typeEffect() {
+      currentText = texts[index];
 
-  <footer>
-    &copy; 2025 Shivam Sharma | DevOps Portfolio
-  </footer>
+      if (isDeleting) {
+        typewriterElement.innerHTML = currentText.substring(0, charIndex--);
+      } else {
+        typewriterElement.innerHTML = currentText.substring(0, charIndex++);
+      }
 
-  <!-- Typed.js -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script>
-    var typed = new Typed("#typed", {
-      strings: ["Linux Administrator", "AWS Enthusiast", "Shell Scripter", "Cloud Learner"],
-      typeSpeed: 50,
-      backSpeed: 30,
-      loop: true
-    });
-  </script>
+      let speed = isDeleting ? 50 : 100;
 
-  <!-- AOS -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-</body>
+      if (!isDeleting && charIndex === currentText.length) {
+        speed = 2000;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        index = (index + 1) % texts.length;
+        speed = 500;
+      }
+
+      setTimeout(typeEffect, speed);
+    }
+
+    typeEffect();
+  </script></body>
 </html>
