@@ -1,152 +1,75 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shivam Sharma - DevOps Portfolio</title>  <!-- Google Fonts -->  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />  <style>
-    * { margin: 0; padding: 0; scroll-behavior: smooth; }
-    body { font-family: 'Poppins', sans-serif; background-color: #0f172a; color: white; }
-    nav {
-      background: #1e293b; padding: 15px 20px; position: sticky; top: 0; z-index: 1000;
-      display: flex; justify-content: space-between; align-items: center;
-    }
-    nav a {
-      color: #fff; margin: 0 12px; text-decoration: none; font-weight: 500;
-    }
-    nav a:hover { color: #38bdf8; }
-    header { text-align: center; padding: 80px 20px 40px; }
-    h1 { font-size: 3rem; }
-    #typed { font-size: 1.3rem; color: #38bdf8; margin-top: 10px; }
-    .section { padding: 60px 20px; text-align: center; }
-    .tech-icons img { width: 60px; margin: 10px; transition: transform 0.3s ease; }
-    .tech-icons img:hover { transform: scale(1.2); }
-    .skills-list {
-      display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 20px;
-    }
-    .skill-badge {
-      background-color: #1e293b; padding: 8px 15px; border-radius: 20px;
-      font-size: 0.9rem; color: #38bdf8; font-weight: 500;
-    }
-    .projects {
-      display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px;
-    }
-    .project-card {
-      background: #1e293b; border-radius: 12px; padding: 20px; width: 300px; text-align: left;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
-    .project-card img { width: 100%; border-radius: 8px; }
-    .project-card h3 { margin: 15px 0 10px; }
-    .project-card p { font-size: 0.9rem; }
-    .project-links a {
-      text-decoration: none; margin-right: 10px; color: #38bdf8; font-weight: 500;
-    }
-    .resume-btn {
-      background: #38bdf8; color: #0f172a; padding: 10px 20px; border-radius: 8px;
-      font-weight: bold; text-decoration: none; margin-top: 15px; display: inline-block;
-    }
-    form {
-      max-width: 400px; margin: auto; display: flex; flex-direction: column;
-    }
-    form input, form textarea {
-      margin: 10px 0; padding: 10px; border: none; border-radius: 6px;
-    }
-    form button {
-      background: #38bdf8; border: none; padding: 10px; font-weight: bold;
-      cursor: pointer; border-radius: 6px;
-    }
-    .social-links {
-      margin-top: 20px;
-    }
-    .social-links a {
-      color: #38bdf8;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    footer {
-      background-color: #1e293b; text-align: center; padding: 20px; font-size: 0.9rem;
-    }
-    @media(max-width: 600px) {
-      h1 { font-size: 2rem; }
-      .projects { flex-direction: column; align-items: center; }
-    }
-  </style></head>
-<body>  <nav>
-    <div><strong>Shivam Sharma</strong></div>
-    <div>
-      <a href="#home">Home</a>
-      <a href="#tech">Tech</a>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shivam Sharma | DevOps Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Shivam Sharma</h1>
+    <p>Linux Administrator | AWS Enthusiast</p>
+    <nav>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
-      <a href="#about">About</a>
+      <a href="#screenshots">Screenshots</a>
       <a href="#contact">Contact</a>
-    </div>
-  </nav>  <header id="home">
-    <h1>Hi, I'm Shivam Sharma</h1>
-    <div id="typed"></div>
-    <a href="shivam-resume.pdf" download class="resume-btn">Download Resume</a>
-  </header>  <section id="tech" class="section" data-aos="fade-up">
-    <h2>Tech Stack</h2>
-    <div class="tech-icons">
-      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" title="AWS" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" title="Linux" />
-    </div>
-  </section>  <section id="skills" class="section" data-aos="fade-up">
+    </nav>
+  </header>
+
+  <section id="skills">
     <h2>Skills</h2>
-    <div class="skills-list">
-      <div class="skill-badge">Linux Administration</div>
-      <div class="skill-badge">AWS EC2 & S3</div>
-      <div class="skill-badge">Shell Scripting</div>
-      <div class="skill-badge">Monitoring Tools (Nagios)</div>
-      <div class="skill-badge">Git & GitHub</div>
-      <div class="skill-badge">Networking Basics</div>
-      <div class="skill-badge">Apache/Nginx</div>
-      <div class="skill-badge">User & Permission Management</div>
-    </div>
-  </section>  <section id="projects" class="section" data-aos="fade-up">
+    <ul>
+      <li>🐧 Linux System Administration</li>
+      <li>☁️ Amazon Web Services (AWS)</li>
+      <li>💻 Shell Scripting</li>
+      <li>🔐 User & Permission Management</li>
+      <li>🛠️ Cronjobs & Task Automation</li>
+    </ul>
+  </section>
+
+  <section id="projects">
     <h2>Projects</h2>
-    <div class="projects">
-      <div class="project-card">
-        <img src="https://raw.githubusercontent.com/techwithlakhan/static-hosting/main/linux-admin-project.jpg" alt="Linux Admin Toolkit">
-        <h3>Linux Admin Toolkit</h3>
-        <p>Designed a toolkit with shell scripts for user management, backups, monitoring, and log analysis on Linux servers.</p>
-        <div class="project-links">
-          <a href="#">GitHub</a>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="https://raw.githubusercontent.com/techwithlakhan/static-hosting/main/server-monitoring.jpg" alt="Monitoring Script">
-        <h3>Server Monitoring Script</h3>
-        <p>Automated CPU, memory & disk usage alerts with cron + email notification using shell scripts.</p>
-        <div class="project-links">
-          <a href="#">GitHub</a>
-        </div>
-      </div>
+    <div class="project">
+      <h3>Linux Shell Automation</h3>
+      <p>Created interactive shell scripts using if-else and case statements for various system-level tasks like user interaction, automated messages, and shutdown simulation.</p>
     </div>
-  </section>  <section id="about" class="section" data-aos="fade-up">
-    <h2>About Me</h2>
-    <p>I am a Linux & Cloud enthusiast who loves managing systems, automating tasks, and building secure infrastructure using open-source tools.</p>
-  </section>  <section id="contact" class="section" data-aos="fade-up">
-    <h2>Contact Me</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-    <div class="social-links">
-      <a href="mailto:Ss731782@gmail.com">📧 Ss731782@gmail.com</a>
-      <a href="https://www.linkedin.com/in/shivam-sharma-367884283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">🔗 LinkedIn</a>
-      <a href="https://github.com/ShivamSharmaDevOps" target="_blank">💻 GitHub</a>
+  </section>
+
+  <section id="screenshots">
+    <h2>Project Screenshots</h2>
+    <div class="screenshots">
+      <figure>
+        <img src="https://raw.githubusercontent.com/ShivamSharmaDevOps/assets/main/shell1.jpg" alt="case.sh code">
+        <figcaption>case.sh — Shell script using case statement</figcaption>
+      </figure>
+      <figure>
+        <img src="https://raw.githubusercontent.com/ShivamSharmaDevOps/assets/main/shell2.jpg" alt="case.sh output">
+        <figcaption>Script output with options like Start, Stop, Shutdown, Hacked</figcaption>
+      </figure>
+      <figure>
+        <img src="https://raw.githubusercontent.com/ShivamSharmaDevOps/assets/main/script1.jpg" alt="script.sh output">
+        <figcaption>script.sh — Day-wise output with case structure</figcaption>
+      </figure>
+      <figure>
+        <img src="https://raw.githubusercontent.com/ShivamSharmaDevOps/assets/main/shell-ifelse.jpg" alt="numbersystem.sh">
+        <figcaption>numbersystem.sh — Menu driven if-else script</figcaption>
+      </figure>
     </div>
-  </section>  <footer>
-    &copy; 2025 Shivam Sharma | DevOps Portfolio
-  </footer>  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>  <script>
-    var typed = new Typed("#typed", {
-      strings: ["Linux Administrator", "AWS Enthusiast", "Shell Scripter", "Cloud Learner"],
-      typeSpeed: 50,
-      backSpeed: 30,
-      loop: true
-    });
-  </script>  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>  <script>AOS.init();</script></body>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <ul>
+      <li>📧 Email: <a href="mailto:Ss731782@gmail.com">Ss731782@gmail.com</a></li>
+      <li>🔗 LinkedIn: <a href="https://www.linkedin.com/in/shivam-sharma-367884283" target="_blank">shivam-sharma</a></li>
+      <li>💻 GitHub: <a href="https://github.com/ShivamSharmaDevOps" target="_blank">ShivamSharmaDevOps</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Shivam Sharma. All rights reserved.</p>
+  </footer>
+</body>
 </html>
